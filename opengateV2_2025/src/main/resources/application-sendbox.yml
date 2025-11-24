@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.20.10:1532/DSPX
+    username: OPENGATEV2
+    password: mxp
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+keycloak:
+  realm: master
+  auth-server-url: http://192.168.20.50:5030
+  resource: postman-demo-client
+  credentials:
+    secret: 2XMyb6Yvo7ujKmDWwcqwX6Ob7zt2wtt4
+  ssl-required: external
+  bearer-only: true         # API only, no login redirects
+  use-resource-role-mappings: true
+
+logging:
+  level:
+    org.keycloak: DEBUG
+    org.springframework.security: DEBUG

@@ -1,0 +1,47 @@
+package com.s2m.ss.api.pr.entities;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString 
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class SSEnt_GetMerchantTransactions {
+	/*@JsonProperty("idtrans")
+	private String idtrans;
+	@JsonProperty("ntrans")
+	private String ntrans;
+	@JsonProperty("transactiontype")
+	private String transactiontype;
+	@JsonProperty("startdate")
+	private String startdate;
+	@JsonProperty("enddate")
+	private String enddate;
+	@JsonProperty("type")
+	private String type;
+	@JsonProperty("start")
+	private String start;
+	@JsonProperty("end")
+	private String end;*/
+	@JsonProperty("merchantId")
+	private String merchantId;
+	@JsonProperty("transactionType")
+	private String transactionType;
+	@JsonProperty("authenticationNumber")private String authenticationNumber;
+	@JsonProperty("status")private String status;
+	@JsonProperty("institution")private String institution;
+	@JsonProperty("startDate")private String startDate;
+	@JsonProperty("endDate")private String endDate;
+	@JsonProperty("start")private String start;
+	@JsonProperty("end")private String end;
+	
+}

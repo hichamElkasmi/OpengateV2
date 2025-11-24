@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: OPENGATEV2
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+keycloak:
+  enabled: false
+  realm: master
+  auth-server-url: http://localhost:5030
+  resource: AWASH_MOB_APP
+  ssl-required: external
+  bearer-only: true
+  use-resource-role-mappings: true
+logging:
+  file:
+    name: ${API_HOME}/Logs/opengate.log
